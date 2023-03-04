@@ -8,8 +8,8 @@ export default function Territorios() {
           {territorios.map((num) => {
             return (
               <div
-                className='col-md-4 text-light mx-auto'
-                style={{ width: '100px' }}
+                className='col-md-4 text-light mx-auto my-2'
+                style={{ width: '110px' }}
                 key={num}
               >
                 <div
