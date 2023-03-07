@@ -3,10 +3,18 @@
 }
 
 .card-body {
-  position: relative;
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 1px rgb(255, 255, 255),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
-  z-index: 1;
+    z-index: 1;
+    position: relative;
+}
+
+#home-card {
+  height: 700px;
+}
+
+#home {
+  overflow: scroll;
 }
 
 .navbar {
