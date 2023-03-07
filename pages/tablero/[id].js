@@ -36,7 +36,7 @@ export default function tablero() {
           <div>
             <div className='card-body rounded mt-3 mx-1'>
               <h3 className='text-center text-secondary pt-2'>{title}</h3>
-              <img src='/fondo3.jpg' className='w-100' />
+              <img src='https://i.ibb.co/JKZbvYb/fondo3.jpg' className='w-100' />
             </div>
           </div>
         </div>
