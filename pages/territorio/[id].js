@@ -30,7 +30,7 @@ function CardPage() {
     const rIndex = Math.floor(Math.random() * terr.examples.length);
     setdireccion([
       ...direccion,
-      `${terr.examples[rIndex]} ${rIndex * 7 + 100}`,
+      `${terr.examples[rIndex]} ${Math.floor(Math.random() * 30) * 7 + 100}`,
     ]);
   }
 
