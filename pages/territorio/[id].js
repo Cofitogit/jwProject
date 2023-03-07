@@ -67,17 +67,17 @@ function CardPage() {
           </div>
         </div>
         <div className='my-2 d-grid justify-content-center'>
-          <div>
+          <div className='mx-auto'>
             <button className='btn btn-secondary' onClick={handleClick}>
               <h3 className='text-light text-center' style={{ height: '20px' }}>
                 AGREGAR EDIFICIO
               </h3>
             </button>
           </div>
-          <div>
+          <div className='mx-auto'>
             <button className='btn btn-info mt-2' onClick={handleExample}>
               <h3 className='text-light text-center' style={{ height: '20px' }}>
-                AGREGAR EJEMPLO
+                EJEMPLO AUTO 
               </h3>
             </button>
           </div>
