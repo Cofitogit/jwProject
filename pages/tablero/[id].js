@@ -10,11 +10,12 @@ export default function tablero() {
         <div className='container d-flex justify-content-center'>
           <div
             className='position-absolute card-body d-flex justify-content-between'
-            style={{ top: '410px', width: '330px', height: '190px' }}
+            style={{ top: '410px', width: '330px', height: '190px'}}
           >
             <div
-              className='bg-secondary bg-gradient align-items-center justify-content-center d-grid'
+              className='bg-secondary align-items-center justify-content-center d-grid'
               style={{ height: '100%', width: '55px' }}
+              id='tab'
             >
               <Link href={'!#'}><button className='btn btn-sm btn-danger'>1-A</button></Link>
               <Link href={'!#'}><button className='btn btn-sm btn-success'>2-A</button></Link>
@@ -23,8 +24,9 @@ export default function tablero() {
               <Link href={'!#'}><button className='btn btn-sm btn-danger'>5-A</button></Link>
             </div>
             <div
-              className='bg-secondary bg-gradient align-items-center justify-content-center d-grid'
+              className='bg-secondary align-items-center justify-content-center d-grid'
               style={{ height: '100%', width: '55px' }}
+              id='tab'
             >
               <Link href={'!#'}><button className='btn btn-sm btn-success'>1-B</button></Link>
               <Link href={'!#'}><button className='btn btn-sm btn-light'>2-B</button></Link>

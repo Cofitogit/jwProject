@@ -5,8 +5,8 @@
 .card-body {
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 1px rgb(255, 255, 255),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
-    z-index: 1;
-    position: relative;
+  z-index: 1;
+  position: relative;
 }
 
 #home-card {
@@ -18,7 +18,7 @@
 }
 
 .navbar {
-    box-shadow: inset 0 -3em 3em rgba(131, 131, 131, 0.1);
+  box-shadow: inset 0 -3em 3em rgba(131, 131, 131, 0.1);
 }
 
 @keyframes move {
@@ -82,4 +82,9 @@
   animation-delay: -50s;
   transform-origin: -23vw 5vh;
   box-shadow: -82vmin 0 10.879497199624952vmin currentColor;
+}
+
+#tab {
+  background: linear-gradient(75deg, #474747, #6e6e6e, #464646);
+  border-radius: 5px;
 }
