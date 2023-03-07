@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Bganimated from '../../components/Bganimated';
@@ -7,9 +8,7 @@ import { terr, territorios } from '../../data';
 function CardPage() {
   const router = useRouter();
   const { id } = router.query;
-  console.log(id);
   const card = territorios.find((c) => c == id);
-  console.log(card);
 
   const [direccion, setdireccion] = useState([]);
 
@@ -21,7 +20,6 @@ function CardPage() {
       alert('No ingresaste ningun dato');
     } else {
       setdireccion([...direccion, nombre]);
-      console.log(direccion);
     }
   }
 
@@ -54,14 +52,16 @@ function CardPage() {
           <div className='card-body rounded'>
             {direccion.map((d) => {
               return (
-                <div
-                  className='border-bottom text-dark border-dark bg-light rounded-end my-2'
-                  style={{ height: '35px' }}
-                >
-                  <h2 className='fw-light mx-2' style={{ height: '20px' }}>
-                    {d}
-                  </h2>
-                </div>
+                <Link href={`/tablero/2`} className='text-decoration-none'>
+                  <div
+                    className='border-bottom text-dark border-dark bg-light rounded-end my-2'
+                    style={{ height: '35px' }}
+                  >
+                    <h2 className='fw-light mx-2' style={{ height: '20px' }}>
+                      {d}
+                    </h2>
+                  </div>
+                </Link>
               );
             })}
           </div>
@@ -77,7 +77,7 @@ function CardPage() {
           <div className='mx-auto'>
             <button className='btn btn-info mt-2' onClick={handleExample}>
               <h3 className='text-light text-center' style={{ height: '20px' }}>
-                EJEMPLO AUTO 
+                EJEMPLO AUTO
               </h3>
             </button>
           </div>

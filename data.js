@@ -6,3 +6,4 @@ export const terr = {
     directions: ["Dirección 1234"],
     examples: ["Lugones","Punilla","Mendoza","Alvear","Alem","9 de Julio","Cassaffousth","Becquer","Gdor. Roca"]
 }
+
