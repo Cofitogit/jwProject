@@ -4,7 +4,29 @@ import { territorios } from '../data';
 export default function Territorios() {
   return (
     <>
-      <div className='card my-3 bg-dark'>
+      <div className='card my-3'>
+        <div className='background rounded'>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <div className='row'>
           {territorios.map((num) => {
             return (
@@ -15,11 +37,11 @@ export default function Territorios() {
               >
                 <Link href={'/territorio'} className='text-decoration-none'>
                   <div
-                    className='card-body rounded bg-black border-top border-warning bg-opacity-25'
+                    className='card-body rounded border bg-light border-black bg-opacity-50'
                     style={{ height: '120px' }}
                   >
                     <div className='my-4'>
-                      <h1 className='text-center text-light fw-bold'>{num}</h1>
+                      <h1 className='text-center text-dark fw-bold'>{num}</h1>
                     </div>
                   </div>
                 </Link>
