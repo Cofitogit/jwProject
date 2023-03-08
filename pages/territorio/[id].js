@@ -9,18 +9,14 @@ function CardPage() {
   const router = useRouter();
   const { id } = router.query;
   const card = territorios.find((c) => c == id);
+  const [visible, setVisible] = useState(false);
 
   const [direccion, setdireccion] = useState([]);
 
   function handleClick(e) {
     e.preventDefault();
-    console.log('clicked');
-    let nombre = prompt('Ingresa la dirección por favor', '');
-    if (nombre === null || nombre === '') {
-      alert('No ingresaste ningun dato');
-    } else {
-      setdireccion([...direccion, nombre]);
-    }
+    setInputValue('');
+    setVisible(!visible);
   }
 
   function handleExample(e) {
@@ -31,6 +27,22 @@ function CardPage() {
       `${terr.examples[rIndex]} ${Math.floor(Math.random() * 30) * 7 + 100}`,
     ]);
   }
+
+  function handleSave(e) {
+    e.preventDefault();
+    if (inputValue === null || inputValue === '') {
+      alert('No ingresaste ningun dato');
+    } else {
+      setdireccion([...direccion, inputValue]);
+    }
+    setVisible(!visible);
+  }
+
+  const [inputValue, setInputValue] = useState('');
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
 
   useEffect(() => {
     console.log('effect activo');
@@ -50,6 +62,42 @@ function CardPage() {
         <div className='card my-3'>
           <Bganimated />
           <div className='card-body rounded'>
+            <div
+              className='position-absolute card-body rounded-3'
+              style={{
+                width: '300px',
+                top: '100px',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                backgroundColor: '#f9e2f7',
+                display: visible ? 'block' : 'none',
+              }}
+            >
+              <h3 className='text-left text-secondary'>
+                Introduzca la dirección del edificio en el espacio blanco:
+              </h3>
+              <hr className='text-secondary' />
+              <div className='input-group flex-nowrap'>
+                <span className='input-group-text' id='addon-wrapping'></span>
+                <input
+                  type='text'
+                  className='form-control'
+                  value={inputValue}
+                  onChange={handleInputChange}
+                  placeholder='Escribir aquí'
+                  aria-label='Dirección del edificio'
+                  aria-describedby='addon-wrapping'
+                />
+              </div>
+              <div className='d-flex justify-content-between my-3'>
+                <button className='btn btn-success' onClick={handleSave}>
+                  GUARDAR
+                </button>
+                <button className='btn btn-light' onClick={handleClick}>
+                  CANCELAR
+                </button>
+              </div>
+            </div>
             {direccion.map((d) => {
               return (
                 <Link href={`/tablero/2`} className='text-decoration-none'>
